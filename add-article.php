@@ -7,8 +7,8 @@
 
 <head>
     <?php require_once "includes/head.php" ?>
-    <title>BLOG APP</title>
-    <link rel="stylesheet" href="./public/css/add-article.css">
+    <link rel="stylesheet" href="public/css/add-article.css">
+    <title>Creer un article</title>
 </head>
 
 
@@ -17,7 +17,7 @@
         <?php require_once "includes/header.php" ?>
         <div class="content">
             <div class="block p-20 form-container">
-                <h1>Ecrire un article</h1>
+                <h1>Je veux écrire un article</h1>
                 <form action="/add-article.php" method="POST">
                     <div class="form-control">
                         <label for="title">Titre</label>
