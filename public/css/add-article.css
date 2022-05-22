@@ -1,0 +1,34 @@
+    .form-container {
+        display: flex;
+        flex-flow: column;
+        width: 60rem;
+    }
+    
+    .form-container h1 {
+        margin-bottom: 2rem;
+    }
+    
+    .form-control {
+        display: flex;
+        flex-flow: column;
+        margin: 1rem 0;
+    }
+    
+    .form-control label {
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
+    }
+    
+    .form-control input,
+    .form-control select,
+    .form-control textarea {
+        border: var(--border);
+        border-radius: 3px;
+        padding: 1rem 1.5rem;
+        font-size: 1.8rem;
+        margin-top: 2.5rem;
+    }
+    
+    .form-control textarea {
+        min-height: 20rem;
+    }

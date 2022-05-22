@@ -7,7 +7,7 @@
 
 <head>
     <?php require_once "includes/head.php" ?>
-    <title>APP</title>
+    <title>BLOG APP</title>
     <link rel="stylesheet" href="./public/css/add-article.css">
 </head>
 
