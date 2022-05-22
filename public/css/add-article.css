@@ -20,8 +20,7 @@
 }
 
 .form-control input,
-.form-control select,
-.form-control textarea {
+.form-control select {
     border: var(--border);
     border-radius: 3px;
     padding: 1rem 1.5rem;
@@ -30,5 +29,32 @@
 }
 
 .form-control textarea {
+    border: var(--border);
+    border-radius: 3px;
+    padding: 1rem 1.5rem;
     min-height: 20rem;
+    font-size: 1.8rem;
+}
+
+.form-action {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    margin-top: 2.5rem;
+}
+
+
+/* .block p-20  {
+    ;
+} */
+
+.p-20 {
+    padding: 30px;
+    margin: 10px;
+    /* border: solid var(--text-color); */
+    box-shadow: var(--box-shadow);
+}
+
+.p-10 {
+    padding: 10px;
 }

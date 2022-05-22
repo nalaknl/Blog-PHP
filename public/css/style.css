@@ -8,10 +8,12 @@
     --text-color: #444;
     --text-color-light: #fff;
     --box-shadow: rgba(60, 64, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-    --border: 1px solid #eee;
+    --border: 2px solid #eee;
 }
 
 * {
+    /* margin: 0;
+    padding: 0; */
     box-sizing: border-box;
 }
 
@@ -25,7 +27,7 @@ body {
 
 h1,
 p {
-    margin: 0%;
+    margin: 0;
 }
 
 h1 {
@@ -46,7 +48,7 @@ a {
 /* Boutons */
 
 .btn {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     font-weight: 700;
     color: var(--text-color);
     font-size: 1.6rem;
@@ -91,9 +93,10 @@ a {
     color: var(--text-color);
 }
 
-.low-opacity {
+
+/* .low-opacity {
     opacity: 0.2;
-}
+} */
 
 
 /* Header */
@@ -111,6 +114,7 @@ header {
 
 .header-menu {
     margin: 0;
+    font-size: 2rem;
 }
 
 .header-menu li {
@@ -137,11 +141,11 @@ header {
 /* Content */
 
 .content {
-    /* flex: 1;
+    flex: 1;
     display: flex;
     flex-flow: row;
     justify-content: center;
-    align-items: center; */
+    align-items: center;
     min-width: 100rem;
     width: 100%;
     flex: 1;
@@ -155,7 +159,7 @@ header {
 /* Footer */
 
 footer {
-    background-color: var(--dark);
+    background-color: var(--text-color);
     display: flex;
     flex-flow: row-reverse;
 }
@@ -163,12 +167,4 @@ footer {
 footer p {
     color: var(--text-color-light);
     padding: 1.5rem;
-}
-
-.p-20 {
-    padding: 20px;
-}
-
-.p-10 {
-    padding: 10px;
 }
