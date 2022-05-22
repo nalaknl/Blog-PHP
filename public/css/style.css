@@ -91,6 +91,10 @@ a {
     color: var(--text-color);
 }
 
+.low-opacity {
+    opacity: 0.2;
+}
+
 
 /* Header */
 
@@ -112,10 +116,10 @@ header {
 .header-menu li {
     border-radius: 3px;
     padding: 5px 15px;
-    transition: 0.3s;
+    transition: background-color 0.3s;
 }
 
-hearder-menu li:hover {
+.header-menu li:hover {
     background-color: var(--primary-dark);
 }
 
