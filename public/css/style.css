@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap");
+:root {
+    --font-family: "Open Sans", sans-serif;
+    --primary: #8e44ad;
+    --dark: #353b48;
+    --danger: #e74c3c;
+    --background_light: #ecf0f1;
+    --text-color: #444;
+    --text-color-light: #fff;
+    --box-shadow: rgba(60, 64, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    --border: 1px solid #eee;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    font-family: var(--font-family);
+}
+
+h1,
+p {
+    margin: 0%;
+}
+
+h1 {
+    margin-bottom: 1.5rem;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+/* Boutons */
+
+.btn {
+    background-color: white;
+    font-weight: 700;
+    color: var(--text-color);
+    font-size: 1.6rem;
+    border: 0;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    border-radius: 3px;
+    margin: 0 0.5rem;
+    transition: all 0.5s;
+    box-shadow: var(--box-shadow);
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--text-color-light);
+}
+
+.btn-danger {
+    background-color: var(--danger);
+    color: var(--text-color-light);
+}
+
+.btn-small {
+    padding: 5px 10px;
+    font-size: 1.4rem;
+}
+
+.text-danger {
+    color: var(--danger);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+
+/* Container */
+
+.container {
+    font-size: 1.6rem;
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column;
+    color: var(--text-color);
+}
+
+
+/* Header */
+
+header {
+    background-color: var(--primary);
+    padding: 1.5rem;
+    box-shadow: var(--box-shadow);
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 2rem;
+    color: var(--text-color-light);
+}
+
+
+/* Content */
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: var(--dark);
+    display: flex;
+    flex-flow: row-reverse;
+}
+
+footer p {
+    color: var(--text-color-light);
+    padding: 1.5rem;
+}
