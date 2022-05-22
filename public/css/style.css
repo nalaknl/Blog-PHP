@@ -123,6 +123,10 @@ header {
     background-color: var(--primary-dark);
 }
 
+.active {
+    background-color: var(--primary-dark);
+}
+
 .logo {
     font-weight: 600;
     font-size: 2rem;
@@ -158,8 +162,4 @@ footer {
 footer p {
     color: var(--text-color-light);
     padding: 1.5rem;
-}
-
-.active {
-    background-color: var(--primary-dark);
 }
