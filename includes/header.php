@@ -1,3 +1,3 @@
 <header>
-    <div class="logo">BLOG</div>
+    <div class="logo">Blog app</div>
 </header>
