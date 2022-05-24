@@ -53,14 +53,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } elseif (mb_strlen($content) < 20) {
         $errors['content'] = ERROR_CONTENT_TOO_SHORT;
     }
-
+    print_r($errors);
     if (empty(array_filter($errors, fn ($e) => $e !== ''))) {
         $articles = [...$articles, [
             'title' => $title,
             'image' => $image,
             'category' => $category,
             'content' => $content,
+            'id' => time()
+
         ]];
+
         file_put_contents($filename, json_encode($articles));
         header('Location: /');
     }
@@ -89,14 +92,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <label for="title">Titre</label>
                         <input type="text" name="title" id="title">
                         <?php if ($errors['title']) : ?>
-                            <p class="text-error"><?= $errors['title'] ?></p>
+                            <p class="text-danger"><?= $errors['title'] ?></p>
                         <?php endif; ?>
                     </div>
                     <div class="form-control">
                         <label for="image">Image</label>
                         <input type="text" name="image" id="image">
                         <?php if ($errors['image']) : ?>
-                            <p class="text-error"><?= $errors['image'] ?></p>
+                            <p class="text-danger"><?= $errors['image'] ?></p>
                         <?php endif; ?>
 
                     </div>
@@ -108,14 +111,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <option value="Politique">Politique</option>
                         </select>
                         <?php if ($errors['category']) : ?>
-                            <p class="text-error"><?= $errors['category'] ?></p>
+                            <p class="text-danger"><?= $errors['category'] ?></p>
                         <?php endif; ?>
                     </div>
                     <div class="form-control">
                         <label for="content">Contenu</label>
                         <textarea name="content" id="content"></textarea>
                         <?php if ($errors['content']) : ?>
-                            <p class="text-error"><?= $errors['content'] ?></p>
+                            <p class="text-danger"><?= $errors['content'] ?></p>
                         <?php endif; ?>
                     </div>
                     <div class="form-action">
