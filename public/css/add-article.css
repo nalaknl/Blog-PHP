@@ -44,17 +44,16 @@
 }
 
 
-/* .block p-20  {
-    ;
-} */
-
-.p-20 {
+/* /* .p-20 {
     padding: 30px;
     margin: 10px;
     /* border: solid var(--text-color); */
-    box-shadow: var(--box-shadow);
-}
 
-.p-10 {
+
+/* box-shadow: var(--box-shadow);
+} */
+
+
+/* .p-10 {
     padding: 10px;
-}
+} */
