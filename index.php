@@ -1,9 +1,22 @@
 <?php
 $filename = __DIR__ . '/data/articles.json';
 $articles = [];
+$categories = [];
 
 if (file_exists($filename)) {
     $articles = json_decode(file_get_contents($filename), true) ?? [];
+    $catmap = array_map(fn ($a) => $a['category'], $articles);
+    $categories = array_reduce($catmap, function ($acc, $cat) {
+        if (isset($acc[$cat])) {
+            $acc[$cat]++;
+        } else {
+            $acc = [$cat] = 1;
+        }
+        return $acc;
+    }, []);
+    echo "<prep>";
+    print_r($categories);
+    echo "</prep>";
 }
 
 ?>
