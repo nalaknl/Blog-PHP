@@ -17,12 +17,16 @@
     padding: 1rem 1.5rem;
 }
 
-.article:hover img-container {
+.article:hover .img-container {
     transform: scale(1.2);
+}
+
+.overflow {
+    overflow: hidden;
 }
 
 .img-container {
     height: 30rem;
     background-size: cover;
-    transform: 0.4s;
+    transition: 0.5s;
 }
