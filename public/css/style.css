@@ -184,4 +184,5 @@ footer {
 footer p {
     background-color: var(--dark);
     padding: 1.5rem;
+    color: var(--text-color-light);
 }

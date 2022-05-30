@@ -1,3 +1,8 @@
+.category-container h2 {
+    font-size: 1.9rem;
+    padding: 0 1.5rem;
+}
+
 .articles-container {
     display: flex;
     flex-flow: row wrap;
@@ -12,7 +17,7 @@
     cursor: pointer;
 }
 
-.article h2 {
+.article h3 {
     font-size: 1.5rem;
     padding: 1rem 1.5rem;
 }
