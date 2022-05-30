@@ -1,10 +1,11 @@
 # Application Blog
-Application écrite en php qui donne la possibilité aux utilisateurs de publier des articles avec un systeme d'authentification
-## Techno utilisées
-PHP
-## Persistence des données
-MySQL
-## Fonctionnalités
-Ajouter un article
-Modifier un article
-Supprimer un article
+Application ecrite en PHP qui donne la possiblite aux utilisateurs de publier des articles
+Avec un systeme d'authentification
+## Techno utilisees
+* PHP
+## Persistence des donnees
+* MySQL
+## Fonctionalites
+* Ajouter un article
+* Modifier un article
+* Supprimer un article

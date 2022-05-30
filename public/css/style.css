@@ -1,11 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
+
 :root {
-    --font-family: "Open Sans", sans-serif;
+    --font-family: 'Open Sans', sans-serif;
     --primary: #8e44ad;
-    --primary-dark: #422050;
-    --dark: #353b48;
+    --primary-dark: #72378b;
+    --dark: #676c75;
     --danger: #e74c3c;
-    --background_light: #ecf0f1;
+    --background-light: #ecf0f1;
     --text-color: #444;
     --text-color-light: #fff;
     --box-shadow: rgba(60, 64, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
@@ -13,27 +14,22 @@
 }
 
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
-html,
-body {
+html, body {
     margin: 0;
     padding: 0;
     font-size: 10px;
     font-family: var(--font-family);
 }
 
-h1,
-p {
+h1, p {
     margin: 0%;
 }
 
 h1 {
     margin-bottom: 2.5rem;
-    padding: 0;
 }
 
 ul {
@@ -46,8 +42,7 @@ a {
     text-decoration: none;
 }
 
-
-/*utils*/
+/* utils */
 
 .p-20 {
     padding: 20px;
@@ -57,11 +52,9 @@ a {
     padding: 10px;
 }
 
-
 /* Boutons */
-
 .btn {
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     font-weight: 700;
     color: var(--text-color);
     font-size: 1.6rem;
@@ -69,8 +62,8 @@ a {
     padding: 1rem 1.5rem;
     cursor: pointer;
     border-radius: 3px;
-    margin: 0 0.5rem;
-    transition: all 0.5s;
+    margin: 0 .5rem;
+    transition: all .5s;
     box-shadow: var(--box-shadow);
 }
 
@@ -89,15 +82,17 @@ a {
     font-size: 1.4rem;
 }
 
+/* .btn:hover {
+    background-color: var(--dark);
+} */
+
 .text-danger {
     color: var(--danger);
     font-size: 1.2rem;
     font-weight: bold;
 }
 
-
 /* Container */
-
 .container {
     font-size: 1.6rem;
     min-height: 100vh;
@@ -107,12 +102,10 @@ a {
 }
 
 .low-opacity {
-    opacity: 0.2;
+    opacity: .2;
 }
 
-
 /* Header */
-
 header {
     background-color: var(--primary);
     padding: 1.5rem;
@@ -126,13 +119,12 @@ header {
 
 .header-menu {
     margin: 0;
-    font-size: 2rem;
 }
 
 .header-menu li {
     border-radius: 3px;
     padding: 5px 15px;
-    transition: background-color 0.3s;
+    transition: background-color .3s;
 }
 
 .header-menu li:hover {
@@ -149,9 +141,7 @@ header {
     color: var(--text-color-light);
 }
 
-
 /* Content */
-
 .content {
     max-width: 100rem;
     width: 100%;
@@ -161,8 +151,6 @@ header {
     flex-flow: column;
     padding: 2rem 0;
     align-items: center;
-    /* box-shadow: var(--box-shadow); */
-    /* justify-content: center; */
 }
 
 .block {
@@ -172,9 +160,7 @@ header {
     box-shadow: var(--box-shadow);
 }
 
-
 /* Footer */
-
 footer {
     background-color: var(--dark);
     display: flex;
@@ -182,7 +168,6 @@ footer {
 }
 
 footer p {
-    background-color: var(--dark);
-    padding: 1.5rem;
     color: var(--text-color-light);
+    padding: 1.5rem;
 }

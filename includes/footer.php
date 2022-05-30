@@ -1,3 +1,3 @@
 <footer>
-    <p>2022/2023 Tous mes droits réservés</p>
+    <p>2022/2023 Tous droits reserves</p>
 </footer>
