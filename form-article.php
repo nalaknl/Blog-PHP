@@ -83,7 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $articles[$articleIdx]['category'] = $category;
             $articles[$articleIdx]['content'] = $content;
         } else {
-            //vous prenez en compte les nouvelles donées
+            //vous prenez en compte les nouvelles données
             $articles = [...$articles, [
                 'title' => $title,
                 'image' => $image,
@@ -142,7 +142,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </div>
                     <div class="form-control">
                         <label for="content">Contenu</label>
-                        <textarea name="content" id="content"> <?= $content ?? '' ?>"</textarea>
+                        <textarea name="content" id="content"> <?= $content ?? '' ?></textarea>
                         <?php if ($errors['content']) : ?>
                             <p class="text-danger"><?= $errors['content'] ?></p>
                         <?php endif; ?>
