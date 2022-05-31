@@ -6,6 +6,7 @@ const ERROR_IMAGE_URL = "L'image doit etre une url valide";
 
 $filename = __DIR__ . '/data/articles.json';
 $articles = [];
+$category = '';
 
 $errors = [
     'title' => '',
@@ -74,14 +75,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     if (empty(array_filter($errors, fn ($e) => $e !== ''))) {
-        $articles = [...$articles, [
-            'title' => $title,
-            'image' => $image,
-            'category' => $category,
-            'content' => $content,
-            'id' => time()
 
-        ]];
+        if ($id) {
+            //on réecrit l'article dans le json avec les nouvelles données
+            $articles[$articleIdx]['title'] = $title;
+            $articles[$articleIdx]['image'] = $image;
+            $articles[$articleIdx]['category'] = $category;
+            $articles[$articleIdx]['content'] = $content;
+        } else {
+            //vous prenez en compte les nouvelles donées
+            $articles = [...$articles, [
+                'title' => $title,
+                'image' => $image,
+                'category' => $category,
+                'content' => $content,
+                'id' => time()
+
+            ]];
+        }
         file_put_contents($filename, json_encode($articles));
         header('Location: /');
     }
@@ -103,7 +114,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="content">
             <div class="block p-20 form-container">
                 <h1><?= $id ?  'Modifier' : 'Ecrire' ?> un article</h1>
-                <form action="/add-article.php" method="POST">
+                <form action="/form-article.php<?= $id ? "?id=$id" : '' ?>" method="POST">
                     <div class="form-control">
                         <label for="title">Titre</label>
                         <input type="text" name="title" id="title" value="<?= $title ?? '' ?>">
@@ -121,9 +132,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <div class="form-control">
                         <label for="category">Categorie</label>
                         <select name="category" id="category">
-                            <option value="Technologie">Technologie</option>
-                            <option value="Nature">Nature</option>
-                            <option value="Politique">Politique</option>
+                            <option <?= !$category || $category === 'technologie' ? 'selected' : '' ?> value="Technologie">Technologie</option>
+                            <option <?= !$category === 'Nature' ? 'selected' : '' ?>value="Nature">Nature</option>
+                            <option <?= !$category === 'politique' ? 'selected' : '' ?>value="Politique">Politique</option>
                         </select>
                         <?php if ($errors['category']) : ?>
                             <p class="text-danger"><?= $errors['category'] ?></p>
