@@ -8,9 +8,10 @@ $pwd = '';
 
 
 $pdo = new PDO($dns, $user, $pwd);
-// $statement = $pdo->prepare(
-//     'INSERT INTO article (title, category, content, image) VALUE(:title, : category, :content, :image)'
-// );
+//requete sql
+$statement = $pdo->prepare(
+    'INSERT INTO article (title, category, content, images) VALUE(:title, : category, :content, :images)'
+);
 // foreach ($articles as $article) {
 //     $statement->bindValue(':title', $article['title']);
 //     $statement->bindValue(':category', $article['category']);
