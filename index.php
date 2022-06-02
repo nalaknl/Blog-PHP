@@ -1,14 +1,21 @@
 <?php
-$filename = __DIR__ . '/data/articles.json';
-$articles = [];
+
+$pdo = require_once './database.php';
+
+$statement = $pdo->prepare('SELECT * FROM article');
+$statement->execute();
+$articles = $statement->fetchAll();
+
+// $filename = __DIR__ . '/data/articles.json';
+// $articles = [];
 $categories = [];
 $selectedCat = '';
 
 $_GET = filter_input_array(INPUT_GET, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 $selectedCat = $_GET['cat'] ?? '';
 
-if (file_exists($filename)) {
-    $articles = json_decode(file_get_contents($filename), true, FILTER_FLAG_NO_ENCODE_QUOTES) ?? [];
+if (count($articles)) {
+    // $articles = json_decode(file_get_contents($filename), true, FILTER_FLAG_NO_ENCODE_QUOTES) ?? [];
     // $articles = array_map(fn ($arr) => array_map('utf8_encode', $arr), $articles);
     $catmap = array_map(fn ($a) => $a['category'], $articles);
     // je creer un tableau associatif qui a pour cles les categories et pour valeurs le nombre d'articles
