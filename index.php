@@ -18,7 +18,7 @@ if (count($articles)) {
     // $articles = json_decode(file_get_contents($filename), true, FILTER_FLAG_NO_ENCODE_QUOTES) ?? [];
     // $articles = array_map(fn ($arr) => array_map('utf8_encode', $arr), $articles);
     $catmap = array_map(fn ($a) => $a['category'], $articles);
-    // je creer un tableau associatif qui a pour cles les categories et pour valeurs le nombre d'articles
+    //je creer un tableau associatif qui a pour cles les categories et pour valeurs le nombre d'articles
     $categories = array_reduce($catmap, function ($acc, $cat) {
         if (isset($acc[$cat])) {
             $acc[$cat]++;
