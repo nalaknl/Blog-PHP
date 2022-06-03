@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * @var PDO
+ */
+
 $pdo = require_once './database.php';
 
 $statement = $pdo->prepare('SELECT * FROM article');

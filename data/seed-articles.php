@@ -2,7 +2,7 @@
 
 $articles = json_decode(file_get_contents('./articles.json'), true);
 
-$dns = 'mysql:host=127.0.0.1:3306;dbname=blog';
+$dns = 'mysql:host=localhost:3306;dbname=blog';
 $user = 'root';
 $pwd = '';
 
