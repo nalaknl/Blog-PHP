@@ -4,7 +4,7 @@
  * @var PDO
  */
 
-$pdo = require_once './database.php';
+$pdo = require_once './database/database.php';
 
 $statement = $pdo->prepare('SELECT * FROM article WHERE id=:id');
 

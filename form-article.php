@@ -3,7 +3,7 @@
 /**
  * @var PDO
  */
-$pdo = require_once './database.php';
+$pdo = require_once './database/database.php';
 $statementCreateOne = $pdo->prepare('
 INSERT INTO article (title, category, content, image) VALUES (:title, :category, :content, :image)
 ');
