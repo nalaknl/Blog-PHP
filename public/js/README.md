@@ -9,4 +9,3 @@ Avec un systeme d'authentification
 * Ajouter un article
 * Modifier un article
 * Supprimer un article
-* deplacer un article
